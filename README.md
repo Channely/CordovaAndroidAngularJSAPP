@@ -6,7 +6,7 @@
 
 ----------------------------------------------
 
-- This 3 steps only need to d once.
+- This 3 steps only need to do once.
 
 - install Cordova	(now - 3.5.0-0.2.4)
 
