@@ -41,8 +41,10 @@
         $ mkdir webapp && cd webapp
 
 - initial the new folder to a angularjs app struct
+- during this command you need to input some words to chat with the terminal,don't worry about the error message:).
+- there's so long a time to running this command,but you'd better watch it carefully.
 
-        $ yo angular webapp
+        $ yo angular webapp 
     
         $ sudo npm install
 
@@ -68,7 +70,8 @@
 
         $ cordova build
 
-- then you can find out a apk file in platforms/android/ant-build/*debug.apk,abd you can install it by command:
+- then you can find out a apk file in platforms/android/ant-build/*debug.apk
+- and if you have connected your android device with this pc,you can install it by command:
     
         $ adb install platforms/android/ant-build/*debug.apk
 
