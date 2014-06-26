@@ -1,12 +1,12 @@
-- My Version
-- ubuntu 14.04/Linux-mint 15
-- git 		(now - 1.8.1.2)
-- nodejs	(now - v0.10.25)
-- android-sdk	(now - api 19,android 4.4)
+## My Version
+#### ubuntu 14.04/Linux-mint 15
+#### git 		(now - 1.8.1.2)
+#### nodejs	(now - v0.10.25)
+#### android-sdk	(now - api 19,android 4.4)
 
 ----------------------------------------------
 
-- This 3 steps only need to do once.
+### This 3 steps only need to do once.
 
 - install Cordova	(now - 3.5.0-0.2.4)
 
@@ -22,7 +22,7 @@
 
 -----------------------------------------------
 
-- The commands below should be done when create a cordova+angular+android project
+### The commands below should be done when create a cordova+angular+android project
 
 - create a new cordova project,navigate to your workspace direction,and execute:
     
@@ -50,7 +50,7 @@
 
 ----------------------------------------------------
 
-- The commands under this line should be run when you build an apk first time
+### The commands under this line should be run when you build an apk first time
 
 - build this angular app
 
@@ -77,7 +77,7 @@
 
 -----------------------------------------------
 
-- after those step above,you have finished full steps from initial a empty project to build a apk and install it on device
+### after those step above,you have finished full steps from initial a empty project to build a apk and install it on device
 
 - you can also write a auto_sync_deploy.sh script file,by running it in terminal you can auto sync the change code to cordova project and build a new version apk to install it into your device conected with pc.
     
@@ -106,7 +106,7 @@
 ------------------------------------
 
 
-- Totol commands:
+#### Totol commands:
 
         $ sudo npm install -g cordova
 
@@ -157,3 +157,5 @@
         $ echo "FINISHED"
 
 ----------------------------------------
+
+###### Welcome your treasured suggestions to make this document better.
