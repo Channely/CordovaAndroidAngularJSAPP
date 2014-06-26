@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <title>YeomanAngularCordovaAPP by Channely</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>YeomanAngularCordovaAPP</h1>
+        <h2>There&#39;s the commands to build the environment for development of cordova(android) &amp; angularjs(yeoman bower grunt),and the demo app of combining cordova android and angularjs.</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/Channely/YeomanAngularCordovaAPP/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/Channely/YeomanAngularCordovaAPP/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/Channely/YeomanAngularCordovaAPP" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h2>
+<a name="my-version" class="anchor" href="#my-version"><span class="octicon octicon-link"></span></a>My Version</h2>
+
+<h4>
+<a name="ubuntu-1404linux-mint-15" class="anchor" href="#ubuntu-1404linux-mint-15"><span class="octicon octicon-link"></span></a>ubuntu 14.04/Linux-mint 15</h4>
+
+<h4>
+<a name="git--------now---1812" class="anchor" href="#git--------now---1812"><span class="octicon octicon-link"></span></a>git        (now - 1.8.1.2)</h4>
+
+<h4>
+<a name="nodejs-now---v01025" class="anchor" href="#nodejs-now---v01025"><span class="octicon octicon-link"></span></a>nodejs (now - v0.10.25)</h4>
+
+<h4>
+<a name="android-sdk----now---api-19android-44" class="anchor" href="#android-sdk----now---api-19android-44"><span class="octicon octicon-link"></span></a>android-sdk    (now - api 19,android 4.4)</h4>
+
+<hr><h3>
+<a name="this-3-steps-only-need-to-do-once" class="anchor" href="#this-3-steps-only-need-to-do-once"><span class="octicon octicon-link"></span></a>This 3 steps only need to do once.</h3>
+
+<ul>
+<li>
+<p>install Cordova   (now - 3.5.0-0.2.4)</p>
+
+<pre><code>$ sudo npm install -g cordova
+</code></pre>
+</li>
+<li>
+<p>install Yeoman    (now - 1.2.0)</p>
+
+<pre><code>$ sudo npm install -g yeoman
+</code></pre>
+</li>
+<li>
+<p>install AngularJS generator for Yeoman</p>
+
+<pre><code>$ sudo npm install -g generator-angular
+</code></pre>
+</li>
+</ul><hr><h3>
+<a name="the-commands-below-should-be-done-when-create-a-cordovaangularandroid-project" class="anchor" href="#the-commands-below-should-be-done-when-create-a-cordovaangularandroid-project"><span class="octicon octicon-link"></span></a>The commands below should be done when create a cordova+angular+android project</h3>
+
+<ul>
+<li>
+<p>create a new cordova project,navigate to your workspace direction,and execute:</p>
+
+<pre><code>$ cd to_my_worksapce/
+
+$ cordova create demo com.company.demo "DemoApp"
+</code></pre>
+</li>
+<li>
+<p>add target platform(you can instead android by ios for ios developer)</p>
+
+<pre><code>$ cd demo/
+
+$ cordova platform add android
+</code></pre>
+</li>
+<li>
+<p>create a folder in the project to code in it</p>
+
+<pre><code>$ mkdir webapp &amp;&amp; cd webapp
+</code></pre>
+</li>
+<li><p>initial the new folder to a angularjs app struct</p></li>
+<li>during this command you need to input some words to chat with the terminal,don't worry about the error message:).</li>
+<li>
+<p>there's so long a time to running this command,but you'd better watch it carefully.</p>
+
+<pre><code>$ yo angular webapp 
+
+$ sudo npm install
+</code></pre>
+</li>
+</ul><hr><h3>
+<a name="the-commands-under-this-line-should-be-run-when-you-build-an-apk-first-time" class="anchor" href="#the-commands-under-this-line-should-be-run-when-you-build-an-apk-first-time"><span class="octicon octicon-link"></span></a>The commands under this line should be run when you build an apk first time</h3>
+
+<ul>
+<li>
+<p>build this angular app</p>
+
+<pre><code>$ grunt --force
+</code></pre>
+</li>
+<li>
+<p>preview the app demo on browser</p>
+
+<pre><code>$ grunt serve
+</code></pre>
+</li>
+<li>
+<p>if the display on browser run well(no bug),then build app for the platforms you have added before,here we build an android app, execute:</p>
+
+<pre><code>$ rm -rf ../www/* 
+
+$ cp -rf dist/* ../www/
+
+$ cd ..
+
+$ cordova build
+</code></pre>
+</li>
+<li><p>then you can find out a apk file in platforms/android/ant-build/*debug.apk</p></li>
+<li>
+<p>and if you have connected your android device with this pc,you can install it by command:</p>
+
+<pre><code>$ adb install platforms/android/ant-build/*debug.apk
+</code></pre>
+</li>
+</ul><hr><h3>
+<a name="after-those-step-aboveyou-have-finished-full-steps-from-initial-a-empty-project-to-build-a-apk-and-install-it-on-device" class="anchor" href="#after-those-step-aboveyou-have-finished-full-steps-from-initial-a-empty-project-to-build-a-apk-and-install-it-on-device"><span class="octicon octicon-link"></span></a>after those step above,you have finished full steps from initial a empty project to build a apk and install it on device</h3>
+
+<ul>
+<li>
+<p>you can also write a auto_sync_deploy.sh script file,by running it in terminal you can auto sync the change code to cordova project and build a new version apk to install it into your device conected with pc.</p>
+
+<pre><code>$ cd webapp/
+
+$ touch auto_sync_deploy.sh
+
+$ gedit auto_sync_deploy.sh
+</code></pre>
+</li>
+<li>
+<p>input these code in it</p>
+
+<pre><code>#!/bin/sh
+grunt --force
+rm -rf ../www/*
+cp -rf dist/* ../www/
+cd ../
+cordova build android
+cd mybapp/
+echo "Complete Now.You can install it by 'adb install -r *debug.apk'"
+adb install -r ../platforms/android/ant-build/*debug.apk
+</code></pre>
+</li>
+<li>
+<p>to run it,under webapp/ you can run:</p>
+
+<pre><code>$ sh auto_sync_deploy.sh
+</code></pre>
+</li>
+</ul><hr><h4>
+<a name="totol-commands" class="anchor" href="#totol-commands"><span class="octicon octicon-link"></span></a>Totol commands:</h4>
+
+<pre><code>    $ sudo npm install -g cordova
+
+    $ sudo npm install -g yeoman
+
+    $ sudo npm install -g generator-angular
+
+    $ cd to_my_worksapce/
+
+    $ cordova create demo com.company.demo "DemoApp"
+
+    $ cd demo/
+
+    $ cordova platform add android
+
+    $ mkdir webapp &amp;&amp; cd webapp
+
+    $ yo angular webapp
+
+        n
+
+        enter
+
+        Y
+
+        enter
+
+        enter
+
+    $ bower install
+
+    $ sudo npm install
+
+    $ grunt --force
+
+    $ rm -rf ../www/*
+
+    $ cp -rf dist/* ../www/
+
+    $ cd ..
+
+    $ cordova build
+
+    $ cd webapp/
+
+    $ adb install -r ../platforms/android/ant-build/*debug.apk
+
+    $ echo "FINISHED"
+</code></pre>
+
+<hr><h6>
+<a name="welcome-your-treasured-suggestions-to-make-this-document-better" class="anchor" href="#welcome-your-treasured-suggestions-to-make-this-document-better"><span class="octicon octicon-link"></span></a>Welcome your treasured suggestions to make this document better.</h6>
+      </section>
+    </div>
+
+    
+  </body>
+</html>
